@@ -33,11 +33,11 @@ class Root extends Component<Props> {
         </Text>
         <Text style={[s.buttonText, r.indexOfMarkedUnit === 1 && s.marked]}
               onPress={() => this._onPress(1)}>
-          button1
+          button2
         </Text>
         <Text style={[s.buttonText, r.indexOfMarkedUnit === 2 && s.marked]}
               onPress={() => this._onPress(2)}>
-          button1
+          button3
         </Text>
         <Text style={s.welcome}>Welcome to React Native!</Text>
         <Text style={s.instructions}>To get started, edit App.js</Text>
