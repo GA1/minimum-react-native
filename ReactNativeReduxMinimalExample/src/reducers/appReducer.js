@@ -4,7 +4,7 @@ import {
 import {createReducer} from "../utils/reducerUtils";
 
 export const initialState = {
-  indexOfMarkedUnit: true,
+  indexOfMarkedUnit: -1,
 };
 
 

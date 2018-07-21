@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Root from "./src/components/Root";
 import {Provider} from "react-redux";
 import reducers from './src/reducers/index';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { createLogger } from 'redux-logger'
 
 const logger = createLogger({

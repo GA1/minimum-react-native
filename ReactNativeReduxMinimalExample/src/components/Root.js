@@ -11,18 +11,34 @@ const instructions = Platform.select({
 });
 
 class Root extends Component<Props> {
+
+  constructor() {
+    super();
+    this._onPress = this._onPress.bind(this)
+  }
+
+  _onPress(index) {
+    this.props.handleUnitClick(index)
+  }
+
+
   render() {
+    let p = this.props
+    let r = p.appReducer
     return (
       <View style={s.container}>
-        <View style={s.button}>
-          <Text style={s.buttonText}>button1</Text>
-        </View>
-        <View style={s.button}>
-          <Text style={s.buttonText}>button2</Text>
-        </View>
-        <View style={s.button}>
-          <Text style={s.buttonText}>button3</Text>
-        </View>
+        <Text style={[s.buttonText, r.indexOfMarkedUnit === 0 && s.marked]}
+              onPress={() => this._onPress(0)}>
+          button1
+        </Text>
+        <Text style={[s.buttonText, r.indexOfMarkedUnit === 1 && s.marked]}
+              onPress={() => this._onPress(1)}>
+          button1
+        </Text>
+        <Text style={[s.buttonText, r.indexOfMarkedUnit === 2 && s.marked]}
+              onPress={() => this._onPress(2)}>
+          button1
+        </Text>
         <Text style={s.welcome}>Welcome to React Native!</Text>
         <Text style={s.instructions}>To get started, edit App.js</Text>
         <Text style={s.instructions}>{instructions}</Text>
@@ -34,8 +50,6 @@ class Root extends Component<Props> {
 const s = StyleSheet.create({
   buttonText: {
     color: 'red',
-  },
-  button: {
     width: 100,
     height: 100,
     margin: 10,
