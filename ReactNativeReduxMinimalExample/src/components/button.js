@@ -38,8 +38,8 @@ const s = StyleSheet.create({
   buttonText: {
     color: 'red',
     width: 100,
-    height: 100,
-    margin: 10,
+    height: 20,
+    margin: 2,
     backgroundColor: 'grey',
   },
   marked: {
