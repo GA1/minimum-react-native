@@ -9,8 +9,8 @@ const logger = createLogger({
 });
 
 var store
-// store = createStore(reducers, applyMiddleware(logger));
-store = createStore(reducers);
+store = createStore(reducers, applyMiddleware(logger));
+// store = createStore(reducers);
 
 
 type Props = {};

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, ScrollView, StyleSheet, Text, View} from 'react-native';
 import { connect } from 'react-redux';
-import {handleUnitClick} from "../actions/article/appActions";
+import {handleButtonClick} from "../actions/article/appActions";
 import Button from "./button";
 
 const instructions = Platform.select({
@@ -19,7 +19,7 @@ class Root extends Component<Props> {
   }
 
   _onPress(index) {
-    this.props.handleUnitClick(index)
+    this.props.handleButtonClick(index)
   }
 
 
@@ -32,7 +32,7 @@ class Root extends Component<Props> {
         <View style={s.container}>
           {
             numbers.map((n) => {
-              return <Button number={n} isMarked={r.indexOfMarkedUnit === n} handleUnitClick={this.props.handleUnitClick} />
+              return <Button key={n} number={n} isMarked={r.indexOfMarkedButton === n} handleButtonClick={this.props.handleButtonClick} />
             })
           }
           <Text style={s.welcome}>Welcome to React Native!</Text>
@@ -73,5 +73,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {
-  handleUnitClick
+  handleButtonClick
 })(Root);

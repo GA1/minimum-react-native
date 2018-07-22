@@ -1,18 +1,18 @@
 import {
-  HANDLE_UNIT_CLICK,
+  HANDLE_BUTTON_CLICK,
 } from '../actions/article/appActionTypes';
 import {createReducer} from "../utils/reducerUtils";
 
 export const initialState = {
-  indexOfMarkedUnit: -1,
+  indexOfMarkedButton: -1,
 };
 
 
 const actionsToStateChangesMap = {
-  [HANDLE_UNIT_CLICK]: (state, p) => {
+  [HANDLE_BUTTON_CLICK]: (state, p) => {
     return {
       ...state,
-      indexOfMarkedUnit: p.indexOfClickedUnit,
+      indexOfMarkedButton: p.indexOfClickedButton,
     };
   },
 }

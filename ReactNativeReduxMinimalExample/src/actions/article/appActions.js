@@ -1,12 +1,12 @@
 import {
-  HANDLE_UNIT_CLICK,
+  HANDLE_BUTTON_CLICK,
 } from './appActionTypes';
 
-export function handleUnitClick(indexOfClickedUnit) {
+export function handleButtonClick(indexOfClickedButton) {
   return {
     payload: {
-      indexOfClickedUnit: indexOfClickedUnit,
+      indexOfClickedButton: indexOfClickedButton,
     },
-    type: HANDLE_UNIT_CLICK,
+    type: HANDLE_BUTTON_CLICK,
   };
 }

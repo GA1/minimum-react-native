@@ -16,7 +16,7 @@ export default class Button extends Component<Props> {
   }
 
   _onPress(index) {
-    this.props.handleUnitClick(index)
+    this.props.handleButtonClick(index)
   }
 
 
