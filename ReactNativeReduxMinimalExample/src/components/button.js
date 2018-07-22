@@ -22,11 +22,12 @@ export default class Button extends Component<Props> {
   shouldComponentUpdate(nextProps) {
     return this.props.isMarked !== nextProps.isMarked
   }
-
+  
   render() {
+    console.log('Button - render')
     let p = this.props
     return (
-      <Text key={p.number} style={[s.buttonText, p.isMarked && s.marked]}
+      <Text style={[s.buttonText, p.isMarked && s.marked]}
             onPress={this._onPress}>
         button + {p.number}
       </Text>
