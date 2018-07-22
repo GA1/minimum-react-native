@@ -19,6 +19,9 @@ export default class Button extends Component<Props> {
     this.props.handleButtonClick(index)
   }
 
+  shouldComponentUpdate(nextProps) {
+    return this.props.isMarked !== nextProps.isMarked
+  }
 
   render() {
     let p = this.props
