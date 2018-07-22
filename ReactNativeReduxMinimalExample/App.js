@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Root from "./src/components/Root";
+import Root from "./src/components/root";
 import {Provider} from "react-redux";
 import reducers from './src/reducers/index';
 import { applyMiddleware, createStore } from 'redux';
