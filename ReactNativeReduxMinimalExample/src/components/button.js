@@ -15,8 +15,8 @@ export default class Button extends Component<Props> {
     this._onPress = this._onPress.bind(this)
   }
 
-  _onPress(index) {
-    this.props.handleButtonClick(index)
+  _onPress() {
+    this.props.handleButtonClick(this.props.number)
   }
 
   shouldComponentUpdate(nextProps) {
@@ -27,7 +27,7 @@ export default class Button extends Component<Props> {
     let p = this.props
     return (
       <Text key={p.number} style={[s.buttonText, p.isMarked && s.marked]}
-            onPress={() => this._onPress(p.number)}>
+            onPress={this._onPress}>
         button + {p.number}
       </Text>
     );
@@ -38,7 +38,7 @@ const s = StyleSheet.create({
   buttonText: {
     color: 'red',
     width: 100,
-    height: 20,
+    height: 40,
     margin: 2,
     backgroundColor: 'grey',
   },
